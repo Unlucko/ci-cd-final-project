@@ -40,7 +40,7 @@ def list_counters():
     """Lists all counters"""
     app.logger.info("Request to list all counters...")
 
-    counters = [dict(name=count[0], counter=count[1])\
+    counters = [dict(name=count[0], counter=count[1])
                 for count in COUNTER.items()]
 
     return jsonify(counters)

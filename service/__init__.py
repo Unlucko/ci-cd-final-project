@@ -6,10 +6,8 @@ from flask import Flask
 app = Flask(__name__)
 
 # This must be imported after the Flask app is created
-from service import routes               # pylint: 
-# disable=wrong-import-position,cyclic-import
-from service.common import log_handlers  # pylint: 
-# disable=wrong-import-position
+from service import routes # pylint:disabl=wrong-import-position,cyclic-import
+from service.common import log_handlers # pylint:disable=wrong-import-position
 
 log_handlers.init_logging(app, "gunicorn.error")
 
