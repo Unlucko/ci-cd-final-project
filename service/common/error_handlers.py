@@ -48,7 +48,7 @@ def not_found(error):
         jsonify(status=status.HTTP_404_NOT_FOUND,
                 error="Not Found", message=message),
                          status.HTTP_404_NOT_FOUND,
-        )
+    )
 
 
 @app.errorhandler(status.HTTP_405_METHOD_NOT_ALLOWED)
